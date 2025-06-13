@@ -55,7 +55,7 @@ model Course{
   chapters Chapter[]
   attachments Attachment[]
   purchases Purchase[]
-
+   transactions Transaction[]
   quizzes Quiz[] // Add this line
   chapterQuizzes ChapterQuiz[]
 
