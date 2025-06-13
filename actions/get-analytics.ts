@@ -1786,7 +1786,7 @@ export const getAnalytics = async (userId: string): Promise<AnalyticsData> => {
       users.map(async (user) => {
         const userLogs = await db.logging.findMany({
           where: {
-            userId: user.id,
+            id: user.id,
             url: { in: ["/login", "/logout"] },
           },
           orderBy: { createdAt: "asc" },
