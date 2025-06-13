@@ -435,6 +435,7 @@ model ChapterQuizResult {
   chapterQuizAttempts ChapterQuizAttempt[]
   chapterQuizResults  ChapterQuizResult[]
   purchases    Purchase[]    // Ensure this relation exists
+   transactions Transaction[]
   points       Int            @default(0)
   level        Int            @default(1)  // Default level is 1
   userProgress UserProgress[] // Add this line to establish the relation
