@@ -156,14 +156,19 @@ model UserProgress{
 }
 
 
+
 model Purchase{
   id String @id @default(uuid()) @map("_id")
   userId String
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  
 
-  user     User    @relation(fields: [userId], references: [id])
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  transactionId String?  //  transactionId to the model
+  transaction   Transaction? @relation(fields: [transactionId], references: [id]) // Add this line
 
+  //profile Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -440,6 +445,26 @@ model ChapterQuizResult {
   
   
 }
+
+model Transaction {
+  id        String   @id @default(uuid()) @map("_id")
+  userId    String
+  courseId  String
+  chapterId String?
+  amount    Int
+  dpoToken String? @unique
+  status    String   @default("PENDING")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  purchases Purchase[] // Add this line to define the reverse relation
+
+  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([courseId])
+} 
+
 
 
  

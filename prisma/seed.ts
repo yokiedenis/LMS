@@ -8,6 +8,7 @@ async function main() {
     data: {
       title: "Cybersecurity Basics",
       courseId: "fde6af28-8836-4359-a8f0-cc104fa355cf", // Replace with a valid courseId
+      position: 1, // Add a valid position value
       questions: {
         create: [
           {
