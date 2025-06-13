@@ -1,0 +1,1051 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.ql-container {
+  font-size: 16px !important;
+}
+
+
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.congrats-banner {
+  animation: moveDown 15s ease-in-out forwards;
+  background-color: #7851a9;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 999;
+}
+.congrats-banner {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.student-helper-container {
+  padding: 2rem; /* Increase padding for a more spacious layout */
+  background-color: #ffffff; /* Use a clean white background for contrast */
+  border-radius: 12px; /* Slightly larger border radius for softer corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a more pronounced effect */
+  max-width: 480px; /* Increased max width for better alignment */
+  margin: 1rem auto; /* Center container and add vertical spacing */
+  border: 1px solid #ddd; /* Add a subtle border for definition */
+}
+
+.chatbot-toggle-btn {
+  background-color: #f39c12; /* Maintain the vibrant primary color */
+  color: white;
+  padding: 14px 28px; /* Slightly larger padding for the button */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Add a transform for a hover effect */
+  font-size: 18px; /* Increase font size for better readability */
+  font-weight: bold; /* Make the button text bold */
+  display: block; /* Ensure it takes full width */
+  margin: 0 auto; /* Center the button */
+}
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  height: 500px; /* Set a fixed height for the chat container */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  border: 1px solid #ddd; /* Add a border around the chat area */
+  border-radius: 8px; /* Round the corners of the chat area */
+  background-color: #f9f9f9; /* Match background with the container */
+  padding: 1rem; /* Add padding for content inside */
+}
+
+.chatbot-header h2 {
+  font-size: 24px; /* Increase font size for the header */
+  color: #333; /* Darker text color for better contrast */
+  margin: 0; /* Remove default margin */
+}
+
+.chatbot-body {
+  flex-grow: 1; /* Allow body to expand and fill available space */
+  padding: 0.5rem; /* Add some padding */
+}
+
+.chatbot-footer {
+  display: flex; /* Flexbox for input and button alignment */
+  margin-top: 1rem; /* Spacing above the footer */
+}
+
+.chatbot-input {
+  flex-grow: 1; /* Allow input to take remaining space */
+  padding: 10px; /* Padding for input field */
+  border: 1px solid #ddd; /* Border for input */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Increase font size for input */
+  margin-right: 10px; /* Spacing between input and button */
+}
+
+.send-btn {
+  background-color: #3498db; /* Color for the send button */
+  color: white;
+  padding: 12px 20px; /* Padding for the button */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Add a transform for a hover effect */
+  font-size: 16px; /* Increase font size for better readability */
+  font-weight: bold; /* Make the button text bold */
+}
+
+.send-btn:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Add styles for messages */
+.user-message {
+  background-color: #e1f5fe; /* Light blue background for user messages */
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0.5rem 0; /* Add some margin between messages */
+  align-self: flex-end; /* Align user messages to the right */
+  max-width: 80%; /* Limit width for user messages */
+  word-wrap: break-word; /* Allow text to wrap */
+}
+
+.bot-message {
+  background-color: #c8e6c9; /* Light green background for bot messages */
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0.5rem 0; /* Add some margin between messages */
+  align-self: flex-start; /* Align bot messages to the left */
+  max-width: 80%; /* Limit width for bot messages */
+  word-wrap: break-word; /* Allow text to wrap */
+}
+
+/* styles/globals.css or your global styles file */
+
+/* styles/globals.css or your global styles file */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; /* Ensure the navbar is above all other content */
+}
+
+.mt-16 {
+  margin-top: 4rem; /* Adjust based on your navbar height */
+}
+
+/* Additional global styles if necessary */
+
+.z-50 {
+  z-index: 50; /* Ensure the navbar is above all other content */
+}
+
+.pt-16 {
+  padding-top: 4rem; /* Adjust based on your navbar height */
+}
+
+.shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* styles/globals.css or styles/Leaderboard.module.css */
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+} */
+
+.leaderboard-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.leaderboard-item:last-child {
+  border-bottom: none;
+}
+
+.rank,
+.name,
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.rank span,
+.score span {
+  margin-left: 8px;
+}
+
+
+
+/* Add any other global styles as needed */
+
+
+ /* styles.css or your global CSS file */
+@keyframes pop {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1); /* Increase the size to 110% */
+  }
+  100% {
+      transform: scale(1); /* Return to original size */
+  }
+}
+
+.popping-logo {
+  animation: pop 0.6s infinite; /* Adjust the duration as needed */
+}
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+
+.color-empty {
+  fill: #ebedf0;
+}
+.color-scale-1 {
+  fill: #c6e48b;
+}
+.color-scale-2 {
+  fill: #7bc96f;
+}
+.color-scale-3 {
+  fill: #239a3b;
+}
+.color-scale-4 {
+  fill: #196127;
+}
+
+.analytics-container {
+  margin: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.analytics-table th,
+.analytics-table td {
+  padding: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #f3e5f5; /* Light purple background */
+}
+
+.analytics-table th {
+  background-color: #6a1b9a; /* Dark purple color */
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.analytics-table tbody tr {
+  transition: background-color 0.3s, transform 0.3s;
+  border-bottom: 1px solid #ddd;
+}
+
+.analytics-table tbody tr:hover {
+  background-color: #e1bee7; /* Lightened purple on hover */
+  transform: scale(1.02);
+}
+
+.analytics-table td {
+  border-right: 1px solid #f2f2f2;
+}
+
+.analytics-table td:last-child {
+  border-right: none;
+}
+
+.learner-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.learner-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.learner-info img:hover {
+  transform: rotate(5deg);
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.status.completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.status.failed {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.status.in-progress {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.status:hover {
+  transform: scale(1.05);
+}
+
+ 
+
+/* @keyframes snow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200px 400px;
+  }
+} */
+
+.analytics-container {
+  margin: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #FFFF;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #3b2f85, #3b2f85, #3b2f85);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: pop 5s infinite linear;
+}
+
+/* h2::before, h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(rgb(255, 255, 255) 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.6;
+  animation: snow 10s linear infinite;
+} */
+
+/* h1::after {
+  background-size: 5px 5px;
+  opacity: 0.4;
+} */
+
+
+.analytics-container {
+  margin: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.analytics-table th,
+.analytics-table td {
+  padding: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #f3e5f5; /* Light purple background */
+}
+
+.analytics-table th {
+  background-color: #6a1b9a; /* Dark purple color */
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.analytics-table tbody tr {
+  transition: background-color 0.3s, transform 0.3s;
+  border-bottom: 1px solid #ddd;
+}
+
+.analytics-table tbody tr:hover {
+  background-color: #e1bee7; /* Lightened purple on hover */
+  transform: scale(1.02);
+}
+
+.analytics-table td {
+  border-right: 1px solid #f2f2f2;
+}
+
+.analytics-table td:last-child {
+  border-right: none;
+}
+
+.learner-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.learner-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.learner-info img:hover {
+  transform: rotate(5deg);
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.status.completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.status.failed {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.status.in-progress {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.status:hover {
+  transform: scale(1.05);
+}
+
+ 
+/* 
+@keyframes snow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200px 400px;
+  }
+} */
+
+.analytics-container {
+  margin: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #FFFF;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #3b2f85, #3b2f85, #3b2f85);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: flip 5s infinite linear;
+}
+
+.cl-internal-pp7u0o {
+  color: white !important;
+}
+
+
+
+/* Leaderboard.module.css */
+
+.leaderboard {
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tr:hover {
+  background-color: #e5e7eb;
+}
+
+
+/* styles.css or in a global CSS file */
+table.dataTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.dataTable thead th {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+table.dataTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.dataTable tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+table.dataTable tbody tr:hover {
+  background-color: #e6e6e6;
+}
+
+.dataTables_filter input {
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.dataTables_wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+/* .cl-headerTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+} */
+
+
+.cl-headerTitle {
+  font-size: 18px;
+  font-weight: bold;
+  /* Change text color to ensure contrast */
+  color: #00008B;
+  /* Remove text-transform to keep the text in normal case */
+  /* text-transform: lowercase; */
+  letter-spacing: 2px;
+  /* Ensure the element has dimensions */
+  width: 100%;
+  height: 50px; /* Adjust this value based on your design */
+  /* Remove opacity to see if the element is there */
+  /* opacity: 0; */
+  position: relative;
+  /* Add background color */
+  background-color: #00008B; /* This is a dark blue color, you can adjust to your preference */
+  /* Ensure the element is visible */
+  display: block;
+  /* Change border color to blue */
+  border: 1px solid blue;
+}
+
+.cl-headerTitle::before {
+  content: 'Sign-In '; /* Text in normal case */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Match the styling of .cl-headerTitle */
+  font-size: 18px;
+  /* Make the text bold and white */
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  /* Ensure the pseudo-element covers the original text */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Bring the pseudo-element in front */
+  z-index: 2; /* Increased to ensure it's on top */
+  /* Add background color to match the container */
+  background-color: #00008B; /* Same dark blue color as the container */
+}
+
+
+/* globals.css or styles.css */
+.input {
+  @apply w-[180px] px-4 py-2 bg-white border border-[#E5E7EB] rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34C759]/50 text-[#1F2A44] text-sm font-medium transition-all duration-200;
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+/* Styling for the text */
+.center {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a90e2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: glowing-text 2s infinite ease-in-out;
+}
+
+/* Continuous animation */
+@keyframes glowing-text {
+  0% {
+    text-shadow: 0 0 5px #4a90e2, 0 0 10px #4a90e2, 0 0 15px #4a90e2;
+    color: #4a90e2;
+  }
+  50% {
+    text-shadow: 0 0 10px #50e3c2, 0 0 20px #50e3c2, 0 0 30px #50e3c2;
+    color: #50e3c2;
+  }
+  100% {
+    text-shadow: 0 0 5px #4a90e2, 0 0 10px #4a90e2, 0 0 15px #4a90e2;
+    color: #4a90e2;
+  }
+}
+
+
+
+/* background image  */
+ 
+  /* .carousel-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: carouselAnimation 12s infinite;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel-slide:nth-child(1) {
+    animation: showImage 12s infinite 0s;
+  }
+
+  .carousel-slide:nth-child(2) {
+    animation: showImage 12s infinite 3s;
+  }
+
+  .carousel-slide:nth-child(3) {
+    animation: showImage 12s infinite 6s;
+  }
+
+  .carousel-slide:nth-child(4) {
+    animation: showImage 12s infinite 9s;
+  }
+
+  @keyframes showImage {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    25%,
+    75% {
+      opacity: 1;
+    }
+  }
+  */
+
+
+
+
+  /* animations.css */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.3s ease-out forwards;
+  }
+  
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  .delay-0 {
+    animation-delay: 0ms;
+  }
+  
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+  
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5);
+    border-radius: 10px;
+  }
+  
+  
+  
+
+  /* Add these styles to your global.css or create Certificate.module.css */
+
+/* Certificate Styles */
+.certificate-container {
+  font-family: 'Times New Roman', serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.certificate-border {
+  border: 15px solid #1a5276;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.certificate-header {
+  margin-bottom: 30px;
+}
+
+.certificate-header h1 {
+  font-size: 48px;
+  color: #1a5276;
+  margin: 0;
+  font-weight: bold;
+}
+
+.certificate-header h2 {
+  font-size: 24px;
+  color: #1a5276;
+  margin: 5px 0 0 0;
+  font-weight: normal;
+}
+
+.certificate-body {
+  margin: 40px 0;
+}
+
+.presented-to, .has-completed {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.recipient-name {
+  font-size: 32px;
+  margin: 20px 0;
+  color: #1a5276;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.course-name {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #1a5276;
+  font-style: italic;
+}
+
+.score {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #1a5276;
+  font-weight: bold;
+}
+
+.signature-section, .issuer-section {
+  margin: 40px auto;
+  width: 60%;
+}
+
+.signature-line {
+  border-top: 1px solid #000;
+  margin: 10px 0;
+  height: 1px;
+}
+
+.date, .issuer-name {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.certificate-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+  
+
+
+@import "~@uploadthing/react/styles.css"
+
+
+
+

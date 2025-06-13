@@ -1,0 +1,60 @@
+[
+  {
+    "id": "default-1",
+    "author": {
+      "name": "Forum Admin",
+      "role": "Administrator",
+      "avatar": "FA"
+    },
+    "createdAt": 1739462400000,
+    "date": "Apr 13, 2025",
+    "timeSince": "3 days ago",
+    "title": "Welcome to the Forum!",
+    "content": "This is a public forum where you can discuss various topics. Feel free to create new posts and reply to existing ones!",
+    "replies": [],
+    "isPinned": true
+  },
+  {
+    "id": "1744788988208",
+    "author": {
+      "name": "teachereduskill2",
+      "role": "Student",
+      "avatar": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ydGV1cDgzZk41NGtCdW8xUWFWNVhuQm93dDcifQ"
+    },
+    "createdAt": 1744788988208,
+    "date": "Apr 16, 2025",
+    "timeSince": "Just now",
+    "title": "New Project",
+    "content": "A new Project has come up ",
+    "replies": [],
+    "isPinned": true
+  },
+  {
+    "id": "1745417015953",
+    "author": {
+      "name": "teachereduskill2",
+      "role": "Student",
+      "avatar": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ydGV1cDgzZk41NGtCdW8xUWFWNVhuQm93dDcifQ"
+    },
+    "createdAt": 1745417015953,
+    "date": "Apr 23, 2025",
+    "timeSince": "Just now",
+    "title": "amazing stories",
+    "content": "hello everyone",
+    "replies": []
+  },
+  {
+    "id": "1745564310149",
+    "author": {
+      "name": "Eduskill lms",
+      "role": "Student",
+      "avatar": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybWMySjFwZGZwekR2Z3FJTWpoQTBSUGtWNkQiLCJyaWQiOiJ1c2VyXzJvM1Z0V3F5VGxoUVlFd1RBeXpuZnFIVGxBdSIsImluaXRpYWxzIjoiRUwifQ"
+    },
+    "createdAt": 1745564310149,
+    "date": "Apr 25, 2025",
+    "timeSince": "Just now",
+    "title": "HRR",
+    "content": "RRRR",
+    "replies": []
+  }
+]

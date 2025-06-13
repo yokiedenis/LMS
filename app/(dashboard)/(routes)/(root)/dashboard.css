@@ -1,0 +1,18 @@
+
+/* app/(dashboard)/(routes)/(root)/dashboard.css */
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-slide {
+    animation: slide 20s infinite linear;
+  }
+  
+  .animate-slide:hover {
+    animation-play-state: paused;
+  }

@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/jsx-key": "off"  // Disables the jsx-key rule
+    // Add other rules you want to disable here
+  }
+}

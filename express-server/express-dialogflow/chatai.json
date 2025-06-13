@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ageless-thought-439510-v2",
+  "private_key_id": "e88599c2503268a66250a71c3629b75b0429d024",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrOYq/sGP0E189\nAPcxSPiNC4q3qztOhJzSC1qcewq+hBun5xKrJc92ZNJE07XSIUE7mcmmOYV2XWd4\nHvpvblIp8pF6cdchWIvPNRiXZtmQMXNI352zudd52YLjE+i4JGfObBzONpkMYule\nTIxDn5IUbliZrN3TWEmJMGdzcHoK/3WcXXCHdm5ybok/2MDxEroUXCAsMWBomgWX\nlG2N8fkFR3PPEIr+ZU/YgryIPP1UVVVlphxxNuDZirZZf0VdGo6dD+bQwxYIddqM\nSgGHbZOtOsZHFhdBlwC+4GLqNGx5jb/aJqxCbVpRnXbDHV9nbre2Xw9j98KMKrZM\nHNyDlM/tAgMBAAECggEAFVEJnAm6t+U9gxu+qo0aHH0mXO1dac4Ks/+j3T1YPhW2\nV7Xl1hbT+DpfDyCIT0vCkkf4GdCpc+329rZsmTjT09MWF3dawBUE+tvyXs74IQJ3\nBsiIGpr1X38b02dkHqCxp7o/79BOR4N86DeBct3H0vFV6HPj/e7M4N580ptbJkkp\nPx7ojR2cksCgoCeReEiNNZ0Ev3RgLA2uMAu9TZCRUByk07xQUdCZqmx6z2dJxDPB\npGV5UVO9qBriQQ00owYm2IYiJrtm31WG9GtsxdsSdEzSvUW3SHpDwwqJZfAznIGr\no/vvkZV9aXtceWD1keNSh/XRACyNoCfvV3uxvmOwYQKBgQDfTp+2h2W8eG0q5Dv6\nCnjFj84lIgrVW3plolsYPJ5abI/OI8A8MuyiNSgMOVCIJcjhOnBn84aM1BD9zuJG\n3JmKkZcR76WO+83VOQBgLnvjQcI9adtN6I8pFMw9V9uaKhkrqeO+SxJDvDsAAb5m\nqVyzMMEhJln5t4KDZRGrNfOCqQKBgQDESumR1nR7Xsev2WTwUoEO5nEaXqy4aHcA\nIpi04XFGKBPVOVGfteMPgBUmufoR3DNZhoLuawSbD/g4HrIGrxrDo6Xt/BTpVB6F\nN5oKu2BwJjbk21UwIXorpj3NAzhsgM02alIxSJ5sDcBn/DgxKXmkB9lz75DdG+Ut\nznGJB21xpQKBgGey+VQoOER3oCqE5p1M85y7FT4FOwatfn9oD+mHbPoM5BMUYxcR\nhvYkvT4/93fiJBEDtGNxoZAQgvt6cXX6x4qj5YW8xiNKJ+HWoKgJrhpw1STz3ZWm\nY6TuNZJfFGnZFutB77LU5dxysutj4+mEyLml8GnWh34BjCg8bSIW4chRAoGAH5Vy\nKZ4ZFfS1Kq1PGYAc9fnMPxL2taFRbHskmQ4hPMmcD1XutUT96POR864+93q35HLJ\nRHWBwzV5mgYOXRb1tn7xZu6Fqtl3I7ZDmfB2XvU3JfHIrjrkvns8PG2FOagr3NKU\nsQtfOkGoMNMbc4WZ5fPBYG8unvUrFgi+qe7BBGUCgYEAzh9sz6QY6AYrzjzKuC+s\nMB7cZ5A1zN1XUQe2KlJKbV7HVVrSlZEAPfpwWXdGzjHFT7igLcDN9nkq6K0mDrfA\nrU6yUpBAaDa6ArbqphlsLwIBHD2+QZOwJpcG+ok9w0AHcFy71WKsqY51TTGMgI7E\nFxPdEzDdUAK9YHtdG0oBzPU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "eduskill-lms@ageless-thought-439510-v2.iam.gserviceaccount.com",
+  "client_id": "110786707271334606585",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eduskill-lms%40ageless-thought-439510-v2.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

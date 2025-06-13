@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #e5ddd5;
+  font-family: Arial, sans-serif;
+}
+
+.chatHeader {
+  background-color: #075e54;
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.chatMessages {
+  flex-grow: 1;
+  padding: 10px 15px;
+  overflow-y: auto;
+  background-color: #efeae2;
+}
+
+.messageContainer {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.student {
+  background-color: #dcf8c6;
+  color: #333;
+  align-self: flex-start;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 0px;
+}
+
+.teacher {
+  background-color: #34b7f1;
+  align-self: flex-end;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0px;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: gray;
+  margin-left: 10px;
+}
+
+.responseInputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+}
+
+.responseInput {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.fileUploadIcon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fileInput {
+  display: none;
+}
+
+.sendButton {
+  background-color: #128C7E;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #075E54;
+}
+
+.messageImage {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+ 
+
+.hiddenFileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+.fileUploadLabel {
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.fileUploadLabel:hover {
+  color: #007bff; /* Optional: hover effect */
+}
+
+
+.notification {
+  color: #4caf50; /* Notification success color */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+ 

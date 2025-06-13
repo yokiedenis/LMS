@@ -1,0 +1,499 @@
+ .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0A1E3C, #1C3A6B); /* Dark blue gradient */
+}
+
+.controlsContainer {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.downloadButton {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #4ca1af, #2c3e50);
+}
+
+.linkedinButton {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #0077B5, #0A66C2);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.linkedinButton:hover {
+  background: linear-gradient(45deg, #0066A8, #0057A3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.linkedinButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.linkedinButton svg {
+  margin-right: 8px;
+}
+
+.certificateContainer {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.1)); /* Dark blue gradient */
+}
+
+.certificateBorder {
+  position: relative;
+  border: 20px solid #f5f5f5;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.1)); /* Dark blue gradient */
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 630px; /* Approximate A4 height in pixels for landscape (210mm * 3px/mm) */
+  background-image: linear-gradient(rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.1)),
+                    radial-gradient(circle, rgba(0, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+
+
+ 
+
+/* Header styles */
+.certificateHeader {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+.certificateHeader h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #FFFF; /* Cyan color for better contrast */
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.certificateHeader h2 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0 1.5rem;
+  color: #FFFF; /* Cyan color */
+  font-weight: 400;
+}
+
+.headerDivider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #00FFFF, transparent);
+  margin: 0 auto;
+  width: 60%;
+}
+
+
+
+/* Decorative corners - Simplified polyhedron-like shapes */
+/* .cornerDecorationTopLeft, */
+.cornerDecorationTopRight,
+.cornerDecorationBottomLeft,
+.cornerDecorationBottomRight {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: none;
+  opacity: 0.8;
+}
+
+
+
+.cornerDecorationTopRight {
+  top: 0;
+  right: 0;
+}
+
+.cornerDecorationBottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.cornerDecorationBottomRight {
+  bottom: 0;
+  right: 0;
+}
+
+/* .cornerDecorationTopLeft::before, */
+.cornerDecorationTopRight::before,
+.cornerDecorationBottomLeft::before,
+.cornerDecorationBottomRight::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+}
+
+/* Position the pseudo-elements */
+.cornerDecorationTopLeft::before {
+  top: 10px;
+  left: 10px;
+}
+
+.cornerDecorationTopRight::before {
+  top: 10px;
+  right: 10px;
+}
+
+.cornerDecorationBottomLeft::before {
+  bottom: 10px;
+  left: 10px;
+}
+
+.cornerDecorationBottomRight::before {
+  bottom: 10px;
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+/* Header alignment for logo */
+.headerAlignment {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: -20px; /* Move the header up */
+  margin-right: -10px; /* Adjust right positioning */
+}
+
+.logoPadding {
+  max-width: 250px; /* Reduced logo size */
+  height: auto;
+   
+  position: relative;
+  top: -10px; /* Move logo up to align with corners */
+  right: 30px;
+  font-size: 20px;
+}
+
+/* Body styles */
+.certificateBody {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.presentedTo, .hasCompleted {
+  font-size: 1.2rem;
+  color: #B0C4DE; /* Light steel blue for contrast */
+  margin: 0.5rem 0;
+}
+
+.recipientName {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color:#D4AF37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle embossed effect */
+}
+
+.courseName {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+  color: #D4AF37; /* Cyan color */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-bottom: 2px solid #00FFFF;
+}
+
+/* Score container */
+.scoreContainer {
+  margin: 1.5rem 0;
+}
+
+.scoreContainer p {
+  margin: 0;
+  color: #B0C4DE; /* Light steel blue */
+  font-size: 1.1rem;
+}
+
+.scoreBadge {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Details container */
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.detailBox {
+  text-align: center;
+}
+
+.detailLabel {
+  font-size: 0.9rem;
+  color: #B0C4DE; /* Light steel blue */
+  margin: 0;
+}
+
+.detailValue {
+  font-size: 1.1rem;
+  color: #00FFFF; /* Cyan color */
+  font-weight: 600;
+  margin: 0.3rem 0 0;
+}
+
+/* Signature section */
+/* .signatureSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 1rem;
+  padding: 0 5rem;
+} */
+
+.signatureSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 1rem;
+  padding: 0 5rem;
+}
+
+/* .signatureBlock {
+  text-align: center;
+  width: 200px;
+} */
+
+.signatureBlock {
+  text-align: center;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .signatureLine {
+  height: 1px;
+  background: #00FFFF;  
+  margin-bottom: 0.5rem;
+} */
+
+.signatureLine {
+  height: 1px;
+  width: 100%; /* Make line full width of container */
+  background: #00FFFF; /* Cyan color */
+  margin: 0.5rem 0; /* Adjust margin for better spacing */
+}
+
+/* .signatureLabel {
+  font-size: 0.9rem;
+  color: #B0C4DE;  
+  margin: 0;
+} */
+
+.signatureLabel {
+  font-size: 0.9rem;
+  color: #B0C4DE; /* Light steel blue */
+  margin: 0;
+  width: 100%; /* Ensure full width for alignment */
+  text-align: center;
+}
+
+ 
+
+
+
+
+/* Issuer section */
+.issuerSection {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.issuerName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFF; /* Cyan color */
+  margin: 0;
+}
+
+.issuerTagline {
+  font-size: 0.9rem;
+  color: #B0C4DE; /* Light steel blue */
+  margin: 0.3rem 0 0;
+  font-style: italic;
+}
+
+/* Verification section */
+.verification {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.qrPlaceholder {
+  width: 80px;
+  height: 80px;
+  background: #f5f5f5;
+  border: 1px dashed #ccc;
+  margin: 0 auto;
+}
+
+.verification p {
+  font-size: 0.7rem;
+  color: #B0C4DE; /* Light steel blue */
+  margin: 0.3rem 0 0;
+}
+
+/* Print-specific styles */
+@media print {
+  .controlsContainer {
+    display: none;
+  }
+  
+  .certificateBorder {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.1)); /* Ensure background in print */
+    background-image: linear-gradient(rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.1)),
+                      radial-gradient(circle, rgba(0, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .certificateContainer {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.1)); /* Ensure background in print */
+  }
+
+  .lockedButton {
+    background-color: #f44336 !important;
+  }
+  
+  .lockedButton:hover {
+    background-color: #d32f2f !important;
+  }
+  
+  .lockedMessage {
+    color: #f44336;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .lockedCertificate {
+    position: relative;
+    filter: blur(2px);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  .lockOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .lockIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+ 
+
+/* Print-specific styles */
+@media print {
+  .headerAlignment {
+    display: flex;
+    justify-content: flex-start; /* Changed to flex-start for left alignment */
+    position: relative;
+    margin-top: -20px;
+    margin-left: -10px; /* Changed from margin-right */
+  }
+
+  .logoPadding {
+    max-width: 200px; /* Increased from 60px to 100px */
+    height: auto;
+    /* Removed the filter that made it white */
+    position: relative;
+    top: -10px;
+    left: 10px; /* Changed from right to left */
+  }
+   }
+}

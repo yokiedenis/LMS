@@ -1,0 +1,7 @@
+/* HelpPage.module.css */
+
+.pageContainer {
+    background-color: #e5ddd5; /* WhatsApp-like background color */
+    height: 100vh;
+    overflow: hidden; /* Prevent any page scrolling */
+}

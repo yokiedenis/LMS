@@ -1,0 +1,773 @@
+/* .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .backgroundElements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .backgroundCircle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(79, 102, 241, 0.1);
+    top: 0;
+  }
+  
+  .content {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .verificationBadge {
+    margin-bottom: 2rem;
+  }
+  
+  .verifiedIcon {
+    font-size: 5rem;
+    color: #10b981;
+    margin-bottom: 1rem;
+  }
+  
+  .verificationBadge h1 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .verificationTimestamp {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  .detailsCard {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .detailItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .detailIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #4f46e5;
+    font-size: 1.2rem;
+  }
+  
+  .detailItem h3 {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .detailItem p {
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .scoreBadge {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scoreCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f0fdf4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  
+  .scoreCircle:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 8px solid #e5e7eb;
+  }
+  
+  .scoreCircleProgress {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: #10b981;
+    border-right-color: #10b981;
+    transform: rotate(-45deg);
+    stroke-dasharray: 188;
+    stroke-dashoffset: 188;
+  }
+  
+  .scoreCircle span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #065f46;
+  }
+  
+  .scoreBadge p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .issuerInfo {
+    margin-top: 2rem;
+  }
+  
+  .issuerLogo {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .issuerInfo p {
+    color: #6b7280;
+    margin: 0.3rem 0;
+  }
+  
+  .issuerTagline {
+    font-style: italic;
+    color: #4f46e5 !important;
+  }
+  
+  .loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .loadingSpinner {
+    margin-bottom: 1rem;
+  }
+  
+  .errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .errorIcon {
+    width: 80px;
+    height: 80px;
+    color: #ef4444;
+    margin-bottom: 1rem;
+  }
+  
+  .errorContainer h2 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .errorContainer p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+  }
+  
+  .retryButton {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .h1 {
+    color: white;
+  } */
+
+
+
+  /* .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .backgroundElements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .backgroundCircle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(79, 102, 241, 0.1);
+    top: 0;
+  }
+  
+  .content {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .verificationBadge {
+    margin-bottom: 2rem;
+    color: white;  
+  }
+  
+  .verifiedIcon {
+    font-size: 5rem;
+    color: #10b981;
+    margin-bottom: 1rem;
+  }
+  
+  .verificationBadge h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .verificationTimestamp {
+    color: #a0aec0; 
+    font-size: 0.9rem;
+  }
+  
+  .detailsCard {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .detailItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .detailIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #4f46e5;
+    font-size: 1.2rem;
+  }
+  
+  .detailItem h3 {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .detailItem p {
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .scoreBadge {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scoreCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f0fdf4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  
+  .scoreCircle:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 8px solid #e5e7eb;
+  }
+  
+  .scoreCircleProgress {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: #10b981;
+    border-right-color: #10b981;
+    transform: rotate(-45deg);
+    stroke-dasharray: 188;
+    stroke-dashoffset: 188;
+  }
+  
+  .scoreCircle span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #065f46;
+  }
+  
+  .scoreBadge p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .issuerInfo {
+    margin-top: 2rem;
+  }
+  
+  .issuerLogo {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .issuerInfo p {
+    color: #6b7280;
+    margin: 0.3rem 0;
+  }
+  
+  .issuerTagline {
+    font-style: italic;
+    color: #4f46e5 !important;
+  }
+  
+  .loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .loadingSpinner {
+    margin-bottom: 1rem;
+  }
+  
+  .errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .errorIcon {
+    width: 80px;
+    height: 80px;
+    color: #ef4444;
+    margin-bottom: 1rem;
+  }
+  
+  .errorContainer h2 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .errorContainer p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+  }
+  
+  .retryButton {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  } */
+
+
+
+
+  .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.backgroundCircle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(79, 102, 241, 0.1);
+  top: 0;
+}
+
+.content {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.verificationBadge {
+  background: #1f2937;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+
+.verifiedIcon {
+  font-size: 4rem;
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.verificationBadge h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.verificationTimestamp {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.detailCard {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.detailCard:hover {
+  transform: translateY(-5px);
+}
+
+.detailIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #4f46e5;
+  font-size: 1.5rem;
+}
+
+.detailContent {
+  width: 100%;
+}
+
+.detailCard h3 {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.detailCard p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 500;
+  margin: 0;
+  word-break: break-word;
+}
+
+.scoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  grid-column: span 1;
+}
+
+.scoreCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.scoreCircle:before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 8px solid #e5e7eb;
+}
+
+.scoreCircleProgress {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: #10b981;
+  border-right-color: #10b981;
+  transform: rotate(-45deg);
+  stroke-dasharray: 188;
+  stroke-dashoffset: 188;
+}
+
+.scoreCircle span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #065f46;
+  z-index: 1;
+}
+
+.scoreLabel {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.issuerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.issuerLogo {
+  height: 40px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.issuerInfo p {
+  color: #6b7280;
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.issuerTagline {
+  font-style: italic;
+  color: #4f46e5 !important;
+  font-weight: 500;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.loadingSpinner {
+  margin-bottom: 1.5rem;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.errorIcon {
+  width: 80px;
+  height: 80px;
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+}
+
+.errorContainer h2 {
+  color: #1f2937;
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.errorContainer p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.retryButton {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .verificationBadge h1 {
+    font-size: 1.5rem;
+  }
+  
+  .detailCard {
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    padding: 3rem;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .scoreCard {
+    grid-column: span 1;
+  }
+}

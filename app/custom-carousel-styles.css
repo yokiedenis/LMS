@@ -1,0 +1,40 @@
+.carousel-slide {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide.slick-active {
+    transform: scale(1.05); /* Scale up the active slide */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .carousel-image:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .slick-dots {
+    bottom: -20px; /* Adjust based on your design */
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .custom-dot {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .slick-active .custom-dot {
+    background: #333;
+  }

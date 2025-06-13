@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #e5ddd5;
+  font-family: Arial, sans-serif;
+}
+
+.chatHeader {
+  background-color: #075e54;
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.chatMessages {
+  flex-grow: 1;
+  padding: 10px 15px;
+  overflow-y: auto;
+  background-color: #efeae2;
+}
+
+.messageContainer {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.student {
+  background-color: #dcf8c6;
+  color: #333;
+  align-self: flex-start;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 0px;
+}
+
+.teacher {
+  background-color: #34b7f1;
+  align-self: flex-end;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0px;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: gray;
+  margin-left: 10px;
+}
+
+.responseInputContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+}
+
+.responseInput {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1em;
+}
+
+.sendButton {
+  background-color: #075e54;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #0a7266;
+}
+
+.notification {
+  color: #34b7f1;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9em;
+}

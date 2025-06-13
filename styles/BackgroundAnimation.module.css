@@ -1,0 +1,23 @@
+/* styles/BackgroundAnimation.module.css */
+@keyframes moveBackground {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+/* BackgroundAnimation.module.css */
+.animatedBackground {
+    position: relative; /* Enable absolute positioning for children */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow if needed */
+  }
+  
+.fullScreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
