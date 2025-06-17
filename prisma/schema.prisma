@@ -135,7 +135,7 @@ model  muxData {
 model UserProgress{
   id String @id @default(uuid()) @map("_id")
   userId String
-
+  courseId String
   chapterId String
   chapter Chapter @relation(fields: [chapterId], references: [id], onDelete:Cascade)
 
