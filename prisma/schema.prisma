@@ -482,7 +482,7 @@ model Recording {
   url       String
   title String
   chapterId String 
-  duration Int
+  duration Int? 
   
   chapter   Chapter  @relation(fields: [chapterId], references: [id])
   uploadedAt DateTime @default(now())
