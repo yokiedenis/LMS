@@ -108,6 +108,7 @@ model Chapter{
   Course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
   userProgress UserProgress[]
+  chapterAttachments ChapterAttachment[]
   quizzes      Quiz[]    
    recordings Recording[]   // Add this line to establish a reverse relation to Quiz
 
