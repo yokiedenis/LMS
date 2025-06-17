@@ -61,7 +61,7 @@ mode String?
   chapterQuizzes ChapterQuiz[]
    instructorAssignments InstructorAssignment[]
  liveSessions LiveSession[] 
- 
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -484,6 +484,7 @@ model Recording {
   title String
   chapterId String 
   duration Int? 
+  courseId String
   
   chapter   Chapter  @relation(fields: [chapterId], references: [id])
   uploadedAt DateTime @default(now())
