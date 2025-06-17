@@ -15,7 +15,7 @@ interface CourseNavbarProps {
       chapters: {
         include: {
           userProgress: true;
-          chapterattachments?: true;
+          chapterAttachments?: true;
         };
       };
     };

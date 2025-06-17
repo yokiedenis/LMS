@@ -409,7 +409,7 @@ const ChapterIdPage = async ({
           questions: true, // Include questions from the Quiz model
         },
       },
-      chapterattachments: true, // Include attachments
+      chapterAttachments: true, // Include attachments
       recordings: true, // Add this to include recordings
     },
   });

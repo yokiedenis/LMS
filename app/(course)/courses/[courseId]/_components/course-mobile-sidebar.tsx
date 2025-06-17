@@ -66,7 +66,7 @@ interface CourseMobileSidebarProps {
       chapters: {
         include: {
           userProgress: true; // userProgress can be null
-          chapterattachments?: true; // chapterattachments is optional
+          chapterAttachments?: true; // chapterattachments is optional
         };
       };
     };

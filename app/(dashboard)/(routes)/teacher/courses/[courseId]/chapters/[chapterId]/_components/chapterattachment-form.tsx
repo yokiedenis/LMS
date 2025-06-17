@@ -149,7 +149,7 @@ import { ChapterAttachment, Chapter } from "@prisma/client";
 import { FileUpload } from "@/components/file-upload";
 
 interface AttachmentFormProps {
-  initialData: Chapter & { chapterattachments: ChapterAttachment[] };
+  initialData: Chapter & { chapterAttachments: ChapterAttachment[] };
   courseId: string;
   chapterId: string;
 }
@@ -213,14 +213,14 @@ export const AttachmentForm = ({
 
       {!isEditing && (
         <>
-          {initialData.chapterattachments.length === 0 && (
+          {initialData.chapterAttachments.length === 0 && (
             <p className="text-sm mt-2 text-slate-500 italic">
               No Attachments Yet
             </p>
           )}
-          {initialData.chapterattachments.length > 0 && (
+          {initialData.chapterAttachments.length > 0 && (
             <div className="space-y-2">
-              {initialData.chapterattachments.map((chapterattachment) => (
+              {initialData.chapterAttachments.map((chapterAttachment) => (
                 <div
                   key={chapterattachment.id}
                   className="flex items-center p-3 w-full bg-sky-100 border-sky-200 border text-sky-700 rounded-md"

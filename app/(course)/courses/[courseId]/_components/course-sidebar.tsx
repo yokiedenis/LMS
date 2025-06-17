@@ -4414,7 +4414,7 @@ interface CourseSidebarProps {
   course: Course & {
     chapters: (Chapter & {
       userProgress: UserProgress[] | null;
-      chapterattachments: ChapterAttachment[];
+      chapterAttachments: ChapterAttachment[];
     })[];
   };
   progressCount: number;
@@ -4579,16 +4579,16 @@ export const CourseSidebar = async ({
                 isLocked={isLocked}
               />
 
-              {!isLocked && chapter.chapterattachments?.length > 0 && (
+              {!isLocked && chapter.chapterAttachments?.length > 0 && (
                 <details className="group px-4 py-2">
                   <summary className="text-sm font-semibold text-gray-700 cursor-pointer flex items-center p-2 rounded-md hover:bg-gray-100 transition-colors duration-200">
                     <span className="mr-2 text-red-500">📎</span>
                     <span className="text-purple-800">
-                      Resources ({chapter.chapterattachments.length})
+                      Resources ({chapter.chapterAttachments.length})
                     </span>
                   </summary>
                   <div className="mt-2 space-y-2">
-                    {chapter.chapterattachments.map((attachment) => (
+                    {chapter.chapterAttachments.map((attachment) => (
                       <a
                         key={attachment.id}
                         href={attachment.url}
