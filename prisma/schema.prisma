@@ -60,7 +60,8 @@ mode String?
   quizzes Quiz[] // Add this line
   chapterQuizzes ChapterQuiz[]
    instructorAssignments InstructorAssignment[]
-
+ liveSessions LiveSession[] 
+ 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
