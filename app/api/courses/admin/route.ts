@@ -1,6 +1,6 @@
 // app/api/courses/admin/route.ts
 import { NextResponse } from "next/server";
-import { currentUser } from "@clerk/nextjs/server"; // Use Clerk's currentUser
+import { currentUser } from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import { isSuperAdmin } from "@/lib/isSuperAdmin";
 
@@ -13,11 +13,11 @@ export async function GET(req: Request) {
 
     const courses = await prisma.course.findMany({
       include: {
-        instructors: {  // This now refers to CourseInstructor records
+        instructors: {
           include: {
-            instructor: {  // Access the Instructor through the join model
+            instructor: {  // This matches your schema's CourseInstructor -> Instructor relation
               include: {
-                user: {  // Then access the User from the Instructor
+                user: {    // Then access the User from the Instructor
                   select: {
                     id: true,
                     name: true,
@@ -54,7 +54,7 @@ export async function POST(req: Request) {
       price,
       categoryId,
       mode,
-      instructorIds,
+      instructorIds, // These should be instructorIds (from Instructor model), not user IDs
     } = body;
 
     const course = await prisma.course.create({
@@ -62,23 +62,27 @@ export async function POST(req: Request) {
         userId: user.id,
         title,
         description,
-        price: price ? parseFloat(price) : null, // Ensure price is a float or null
+        price: price ? parseFloat(price) : null,
         categoryId,
-        mode: mode as "LIVE" | "HYBRID" | "ONDEMAND", // Ensure mode is correctly typed
+        mode: mode as "LIVE" | "HYBRID" | "ONDEMAND",
         instructors: {
-          create: instructorIds.map((userId: string) => ({
-            userId,
+          create: instructorIds.map((instructorId: string) => ({
+            instructorId, // This matches the CourseInstructor model's field
           })),
         },
       },
       include: {
         instructors: {
           include: {
-            user: {
-              select: {
-                id: true,
-                name: true,
-                email: true,
+            instructor: {
+              include: {
+                user: {
+                  select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                  },
+                },
               },
             },
           },
