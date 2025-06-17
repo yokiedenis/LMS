@@ -476,6 +476,7 @@ model Recording {
   url       String
   title String
   chapterId String 
+  duration String 
   chapter   Chapter  @relation(fields: [chapterId], references: [id])
   isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
