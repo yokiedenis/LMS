@@ -108,7 +108,8 @@ model Chapter{
   Course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
   userProgress UserProgress[]
-  quizzes      Quiz[]       // Add this line to establish a reverse relation to Quiz
+  quizzes      Quiz[]    
+   recordings Recording[]   // Add this line to establish a reverse relation to Quiz
 
   chapterquizzes   ChapterQuiz[] // This defines the reverse relation to ChapterQuiz
 
@@ -468,11 +469,12 @@ model Transaction {
 
 
 
- model Recording {
+model Recording {
   id        String   @id @default(uuid()) @map("_id")
   url       String
   chapterId String
   chapter   Chapter  @relation(fields: [chapterId], references: [id])
+  isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
