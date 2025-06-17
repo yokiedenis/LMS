@@ -477,7 +477,9 @@ model Recording {
   title String
   chapterId String 
   duration Int
+  
   chapter   Chapter  @relation(fields: [chapterId], references: [id])
+  uploadedAt DateTime @default(now())
   isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
