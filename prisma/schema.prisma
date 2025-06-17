@@ -414,6 +414,7 @@ model ChapterQuizAttempt {
   score         Int
   totalQuestions Int
   answers       String   // Storing answers as JSON string
+  createdAt    DateTime         @default(now())
   chapterQuiz  ChapterQuiz      @relation(fields: [chapterQuizId], references: [id], onDelete: Cascade)
   student      User?             @relation(fields: [studentId], references: [id], onDelete: Cascade)
 }
