@@ -99,6 +99,7 @@ model Chapter{
   title String
   description String?  
   videoUrl String? 
+  googleDriveUrl String? 
   position Int
   isPublished Boolean @default(false)
   isFree Boolean @default(false)

@@ -2374,8 +2374,8 @@ const ChapterIdPage = async ({
             playbackId={muxData?.playbackId!}
             isLocked={isLocked}
             completeOnEnd={completeOnEnd}
-            videoUrl={chapter.videoUrl}
-            googleDriveUrl={chapter.googleDriveUrl}
+            videoUrl={chapter.videoUrl || undefined}
+            googleDriveUrl={chapter.googleDriveUrl || undefined} 
           />
         </div>
         <div>
