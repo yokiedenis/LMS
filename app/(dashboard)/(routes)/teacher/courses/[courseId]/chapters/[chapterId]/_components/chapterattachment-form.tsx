@@ -222,19 +222,19 @@ export const AttachmentForm = ({
             <div className="space-y-2">
               {initialData.chapterAttachments.map((chapterAttachment) => (
                 <div
-                  key={chapterattachment.id}
+                  key={chapterAttachment.id}
                   className="flex items-center p-3 w-full bg-sky-100 border-sky-200 border text-sky-700 rounded-md"
                 >
                   <File className="h-4 w-4 mr-2 flex-shrink-0" />
-                  <p className="text-xs line-clamp-1">{chapterattachment.name}</p>
-                  {deletingId === chapterattachment.id && (
+                  <p className="text-xs line-clamp-1">{chapterAttachment.name}</p>
+                  {deletingId === chapterAttachment.id && (
                     <div>
                       <Loader2 className="h-4 w-4 animate-spin" />
                     </div>
                   )}
-                  {deletingId !== chapterattachment.id && (
+                  {deletingId !== chapterAttachment.id && (
                     <button
-                      onClick={() => onDelete(chapterattachment.id)}
+                      onClick={() => onDelete(chapterAttachment.id)}
                       className="ml-auto hover:opacity-75 transition"
                     >
                       <X className="h-4 w-4 transition" />
