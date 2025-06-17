@@ -406,7 +406,8 @@ model ChapterQuizAttempt {
   id           String           @id @default(uuid()) @map("_id") // MongoDB ID mapping
   chapterQuizId String
   studentId    String
-
+  chapterId String 
+  
   score         Int
   totalQuestions Int
   answers       String   // Storing answers as JSON string
