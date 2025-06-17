@@ -13,13 +13,17 @@ export async function GET(req: Request) {
 
     const courses = await prisma.course.findMany({
       include: {
-        instructors: {
+        instructors: {  // This now refers to CourseInstructor records
           include: {
-            user: {
-              select: {
-                id: true,
-                name: true,
-                email: true,
+            instructor: {  // Access the Instructor through the join model
+              include: {
+                user: {  // Then access the User from the Instructor
+                  select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                  },
+                },
               },
             },
           },

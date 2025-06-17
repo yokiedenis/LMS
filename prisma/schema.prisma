@@ -60,7 +60,7 @@ mode String?
   quizzes Quiz[] // Add this line
   chapterQuizzes ChapterQuiz[]
    instructorAssignments InstructorAssignment[]
-     instructors Instructor[] @relation("CourseInstructors")
+     instructors CourseInstructor[] 
  liveSessions LiveSession[] 
  recordings Recording[]
 
@@ -543,8 +543,22 @@ model Instructor {
   email    String   @unique
   name    String   
   user      User     @relation(fields: [userId], references: [id])
-  courses   Course[] @relation("CourseInstructors")
+ courses   CourseInstructor[] 
   bio       String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model CourseInstructor {
+  id          String     @id @default(uuid()) @map("_id")
+  courseId    String
+  instructorId String
+  course      Course     @relation(fields: [courseId], references: [id])
+  instructor  Instructor @relation(fields: [instructorId], references: [id])
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  @@unique([courseId, instructorId])
+  @@index([courseId])
+  @@index([instructorId])
 }
