@@ -51,6 +51,7 @@ model Course{
   categoryId String?
   category Category? @relation(fields: [categoryId], references: [id])
   name String?
+mode String?
 
   chapters Chapter[]
   attachments Attachment[]
@@ -407,7 +408,7 @@ model ChapterQuizAttempt {
   chapterQuizId String
   studentId    String
   chapterId String 
-  
+
   score         Int
   totalQuestions Int
   answers       String   // Storing answers as JSON string
