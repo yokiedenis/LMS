@@ -461,7 +461,7 @@ const CourseLayout = async ({
               userId,
             }
           },
-          chapterattachments: true,
+          chapterAttachments: true,
         },
         orderBy: {
           position: "asc"
