@@ -51,9 +51,7 @@ model Course{
   categoryId String?
   category Category? @relation(fields: [categoryId], references: [id])
   name String?
-  email String?
 mode String?
-
 
   chapters Chapter[]
   attachments Attachment[]
@@ -62,6 +60,7 @@ mode String?
   quizzes Quiz[] // Add this line
   chapterQuizzes ChapterQuiz[]
    instructorAssignments InstructorAssignment[]
+     instructors Instructor[] @relation("CourseInstructors")
  liveSessions LiveSession[] 
  recordings Recording[]
 
@@ -443,6 +442,7 @@ model ChapterQuizResult {
   id           String       @id @default(uuid()) @map("_id")
   name         String
   email        String       @unique
+  instructor   Instructor?
   quizAttempts QuizAttempt[] // Relation back to QuizAttempt
   chapterQuizAttempts ChapterQuizAttempt[]
   chapterQuizResults  ChapterQuizResult[]
@@ -535,4 +535,16 @@ model LiveSession {
 
   // Indexes
   @@index([courseId])
+}
+
+model Instructor {
+  id        String   @id @default(uuid()) @map("_id")
+  userId    String   @unique
+  email    String   @unique
+  name    String   
+  user      User     @relation(fields: [userId], references: [id])
+  courses   Course[] @relation("CourseInstructors")
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
