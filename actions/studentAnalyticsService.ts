@@ -16,7 +16,7 @@ function calculateTimeSpent(userProgress: any[]): number {
 // Function to get the last login time
 async function getLastLogin(studentId: string): Promise<Date | null> {
     const lastLogin = await prisma.logging.findFirst({
-      where: { userId: studentId },
+      where: { id: studentId },
       orderBy: { createdAt: 'desc' }
     });
     return lastLogin ? lastLogin.createdAt : null;
