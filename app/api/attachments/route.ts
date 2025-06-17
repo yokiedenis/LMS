@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
     // Fetch all chapter attachments
     const chapterAttachments = await db.chapterAttachment.findMany({
       include: {
-        Chapter: true, // Fetch associated chapter details
+        chapter: true, // Fetch associated chapter details
       },
       orderBy: { createdAt: "desc" },
     });
