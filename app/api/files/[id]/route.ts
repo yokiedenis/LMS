@@ -92,8 +92,6 @@
 //   }
 // }
 
-
-// app/api/files/[id]/route.ts
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 
@@ -122,12 +120,8 @@ export async function GET(request: Request, { params }: { params: { id: string }
     headers.set('Content-Length', file.size.toString());
     headers.set('Cache-Control', 'public, max-age=31536000'); // Cache for 1 year
 
-    // Use file.data directly (Buffer is valid for BodyInit)
-    const body = file.data; // Buffer is compatible with BodyInit
-
-    console.log('Serving file:', { fileId, name: file.name, type: file.type });
-
-    return new NextResponse(body, {
+    // Return the file data
+    return new NextResponse(file.data, {
       status: 200,
       headers,
     });

@@ -562,3 +562,18 @@ model CourseInstructor {
   @@index([courseId])
   @@index([instructorId])
 }
+
+model File {
+  id        String   @id @default(uuid()) @map("_id")
+  name      String
+  url       String?
+  data      Bytes    // For storing file binary data
+  size      Int
+  type      String
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Add any additional fields you need
+}
