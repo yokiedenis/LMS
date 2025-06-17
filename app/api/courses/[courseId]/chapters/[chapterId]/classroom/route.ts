@@ -134,6 +134,7 @@ export async function POST(req: NextRequest, { params }: { params: { courseId: s
         duration: duration ? parseInt(duration) : null,
         chapterId,
         isActive: true,
+        courseId,
       },
     });
 

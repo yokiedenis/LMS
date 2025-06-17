@@ -485,7 +485,7 @@ model Recording {
   title String
   chapterId String 
   duration Int? 
-    courseId String?
+    courseId String
   course Course @relation(fields: [courseId], references: [id])
   
   chapter   Chapter  @relation(fields: [chapterId], references: [id])
