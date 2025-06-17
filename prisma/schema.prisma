@@ -51,7 +51,9 @@ model Course{
   categoryId String?
   category Category? @relation(fields: [categoryId], references: [id])
   name String?
+  email String?
 mode String?
+
 
   chapters Chapter[]
   attachments Attachment[]
