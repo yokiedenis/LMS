@@ -468,4 +468,11 @@ model Transaction {
 
 
 
- 
+ model Recording {
+  id        String   @id @default(uuid()) @map("_id")
+  url       String
+  chapterId String
+  chapter   Chapter  @relation(fields: [chapterId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
