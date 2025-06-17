@@ -59,6 +59,7 @@ mode String?
    transactions Transaction[]
   quizzes Quiz[] // Add this line
   chapterQuizzes ChapterQuiz[]
+   instructorAssignments InstructorAssignment[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -440,6 +441,7 @@ model ChapterQuizResult {
   chapterQuizAttempts ChapterQuizAttempt[]
   chapterQuizResults  ChapterQuizResult[]
   purchases    Purchase[]    // Ensure this relation exists
+   instructorAssignments InstructorAssignment[]
    transactions Transaction[]
   points       Int            @default(0)
   level        Int            @default(1)  // Default level is 1
